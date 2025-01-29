@@ -9,5 +9,17 @@ class Item(BaseModel):
     price: float = Field(..., gt=0)
 
 @app.post("/items/")
+
 async def create_item(item: Item):
     return item
+class Address(BaseModel):
+    street: str
+    city: str
+
+class User(BaseModel):
+    name: str
+    address: Address
+
+@app.post("/users/")
+async def create_user(user: User):
+    return user
