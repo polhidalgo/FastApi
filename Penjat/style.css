@@ -1,0 +1,352 @@
+/* General Styles */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #fff3cd;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header input {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ffa07a;
+    border-radius: 5px;
+    width: 200px;
+}
+
+header button {
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #ffa07a;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+header button:hover {
+    transform: scale(1.1);
+    background-color: #ff6347;
+}
+
+/* Juego Section */
+#juego {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 500px;
+}
+
+#palabraOculta {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    color: #2f4f4f;
+    margin-bottom: 20px;
+}
+
+#intentosRestantes img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+/* Botones Letras */
+#botonesLetras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+#botonesLetras button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#botonesLetras button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #478ed1, #42a5f5);
+}
+
+#botonesLetras button:disabled {
+    background: gray;
+    cursor: not-allowed;
+    color: #ddd;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header input {
+        width: 90%;
+    }
+
+    #juego {
+        padding: 20px;
+        width: 100%;
+    }
+}
+
+/* ---------------- SELECT (Temáticas) ---------------- */
+#tematicas {
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ffa07a;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#tematicas:hover {
+    background-color: #ffdab9;
+    transform: scale(1.05);
+}
+
+/* ---------------- CHECKBOX (Abecedario extendido) ---------------- */
+label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#extenderAbecedario {
+    width: 18px;
+    height: 18px;
+    accent-color: #ffa07a; /* Color naranja */
+    cursor: pointer;
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
+#extenderAbecedario:hover {
+    transform: scale(1.2);
+}
+
+/* ---------------- BOTÓN (Comenzar Juego) ---------------- */
+#comenzarJuego {
+    font-size: 18px;
+    padding: 10px 15px;
+    border: none;
+    background: linear-gradient(135deg, #ffa07a, #ff6347);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#comenzarJuego:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #ff6347, #ff4500);
+}
+
+/* ---------------- BOTONES DE LETRAS ---------------- */
+#botonesLetras {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+#botonesLetras button {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #42a5f5, #478ed1);
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background 0.3s ease;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+#botonesLetras button:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(135deg, #478ed1, #42a5f5);
+}
+
+#botonesLetras button:disabled {
+    background: gray;
+    cursor: not-allowed;
+    color: #ddd;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    #tematicas {
+        width: 90%;
+    }
+
+    #botonesLetras {
+        gap: 5px;
+    }
+
+    #botonesLetras button {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+.stats-box {
+    background-color: #d46ba5; /* color rosado */
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    color: white;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stats-box h2 {
+    margin-top: 0;
+}
+
+.stats-box p {
+    margin: 5px 0;
+}
+
+#register-box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #fff3cd;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 250px;
+  }
+  #register-box h3 {
+    margin-top: 0;
+    text-align: center;
+  }
+  #register-box label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+  }
+  #register-box input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #register-box button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  #register-box button:hover {
+    background: #45a049;
+  }
+  /* Estilos para el recuadro de login (izquierda, medio de la página) */
+  #login-box {
+    position: fixed;
+    top: 80%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: #d0e8f2;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    width: 250px;
+  }
+  #login-box h3 {
+    margin-top: 10px;
+    text-align: center;
+  }
+  #login-box label {
+    display: block;
+    margin-top: 8px;
+    font-weight: bold;
+  }
+  #login-box input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  #login-box button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 8px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  #login-box button:hover {
+    background: #0b7dda;
+  }
+  /* Mensajes de feedback */
+  .message {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
